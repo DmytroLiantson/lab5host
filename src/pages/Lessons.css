@@ -1,0 +1,43 @@
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .filters button {
+    background: var(--card-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .filters button.active,
+  .filters button:hover {
+    background: var(--hover-bg);
+  }
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .completed-lessons {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+.completed-lessons h2 {
+    margin-bottom: 10px;
+}
+.completed-lessons input[type="date"] {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.completed-lessons ul {
+    list-style: none;
+    padding: 0;
+}
+.completed-lessons li {
+    padding: 5px 0;
+}
