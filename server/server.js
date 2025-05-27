@@ -11,12 +11,8 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
+app.use(cors());
 const app = express();
-const corsOptions = {
-  origin: 'https://lab5host.onrender.com',  
-  credentials: true,                        
-};
-app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/api/lessons", async (req, res) => {
