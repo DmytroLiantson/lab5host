@@ -11,8 +11,8 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 
-app.use(cors());
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get("/api/lessons", async (req, res) => {
