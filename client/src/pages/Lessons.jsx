@@ -14,7 +14,7 @@ export default function Lessons() {
   useEffect(() => {
     const fetchLessons = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/lessons');
+        const response = await fetch("https://lab5host.onrender.com/api/lessons");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

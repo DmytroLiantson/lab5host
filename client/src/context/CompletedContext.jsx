@@ -16,7 +16,7 @@ export const CompletedProvider = ({ children }) => {
       }
       try {
         console.log('Fetching completed lessons for user:', user.uid);
-        const response = await fetch(`http://localhost:5000/api/lessons-progress?userId=${user.uid}`);
+        const response = await fetch(`http://lab5host.onrender.com/api/lessons-progress?userId=${user.uid}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -39,7 +39,7 @@ export const CompletedProvider = ({ children }) => {
     console.log('Updating completed lessons:', { lessonId, action, optimistic });
     setCompleted(optimistic);
     try {
-      const response = await fetch('http://localhost:5000/api/lessons-progress', {
+      const response = await fetch('http://lab5host.onrender.com/api/lessons-progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.uid, lessonId: String(lessonId), action })

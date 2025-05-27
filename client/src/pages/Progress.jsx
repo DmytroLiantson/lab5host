@@ -14,7 +14,7 @@ export default function Progress() {
   useEffect(() => {
     const fetchTotalLessons = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/total-lessons');
+        const response = await fetch('http://lab5host.onrender.com/api/total-lessons');
         const data = await response.json();
         setTotalLessons(data.total);
       } catch (error) {
